@@ -1,14 +1,21 @@
+C++ ?= g++
+
 sample: sample.o
-	g++ sample.o -o sample
+	$(C++) sample.o -o sample
 
 sample.o: sample.cpp sum.o divide.o log.o
-	g++ -c sample.cpp
+	$(C++) -c sample.cpp
 
 sum.o: sum.cpp
-	g++ -c sum.cpp
+	$(C++) -c sum.cpp
 
 divide.o: divide.cpp
-	g++ -c divide.cpp
+	$(C++) -c divide.cpp
 
 log.o: log.cpp
-	g++ -c log.cpp
+	$(C++) -c log.cpp
+
+clean:
+	-rm -f *.o
+
+.PHONY: clean
