@@ -1,10 +1,10 @@
 C++ ?= g++
 
-sample: sample.o
-	$(C++) sample.o -o sample
+exercise: exercise.o
+	$(C++) exercise.o -o exercise
 
-sample.o: sample.cpp sum.o divide.o log.o
-	$(C++) -c sample.cpp
+exercise.o: exercise.cpp sum.o divide.o log.o
+	$(C++) -c exercise.cpp
 
 sum.o: sum.cpp
 	$(C++) -c sum.cpp
